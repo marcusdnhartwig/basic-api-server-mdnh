@@ -2,9 +2,16 @@
 
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('clothes', {
-    clothes: {
-      type: DataTypes.ENUM,
-      values: ['pants', 'shirts', 'sunskirts'],
+    clothesType: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    clothesMake: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    clothesModel: {
+      type: DataTypes.STRING,
       allowNull: true,
     },
   });

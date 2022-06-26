@@ -1,6 +1,6 @@
 'use strict';
 
-const { sequelize, foodModel, clothesModel, indexModel } = require('./collections');
+const { sequelize } = require('./src/models');
 const server = require('./src/server');
 
 // create all associated tables and make sure connection is good

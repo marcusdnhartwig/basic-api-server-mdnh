@@ -2,9 +2,13 @@
 
 module.exports = (sequelize, DataTypes) => {
   return sequelize.define('food', {
-    food: {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    baseType: {
       type: DataTypes.ENUM,
-      values: ['grub', 'souuuup', 'dim sum'],
+      values: ['beef', 'chicken', 'pork', 'vegetarian', 'other'],
       allowNull: true,
     },
   });
